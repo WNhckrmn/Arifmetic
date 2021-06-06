@@ -169,7 +169,7 @@ int main() {
         }
 
         for (int i = 0; i < 7; ++i) {
-            unsigned char per = 255 & (result >> (i * 8));
+            unsigned char per = 0 | (result >> (i * 8));
             res.write((char*)&per, sizeof(per));
             //cout << per;
         }
